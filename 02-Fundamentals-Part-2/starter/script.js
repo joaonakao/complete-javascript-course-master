@@ -92,3 +92,66 @@ const yearUntilRetirement = function(birthYear, firstName) {
 console.log (yearUntilRetirement(1991, 'Jonas'));
 console.log (yearUntilRetirement(1950, 'Mike'));
 
+// arrays
+const friends = ['Michael','Steven','Peter'];
+console.log(friends);
+
+const years = new Array(1991,1984,2008);
+console.log(years)
+
+console.log(friends[0]);
+
+console.log (friends.length);
+console.log(friends[friends.length - 1]);
+
+friends[2] = 'Jay';
+console.log (friends);
+
+const firstName = 'Jonas';
+const jonas = [firstName, 'Silva', 2037 - 1991,'teacher', friends];
+console.log(jonas);
+
+//exercise
+const calcAge4 = function(birthYear){
+    return 2037 - birthYear;
+}
+const year = [1990,1967,2002,2010,2018];
+
+const age90 = calcAge4(year[0]);
+const age67 = calcAge4(year[1]);
+const age18 = calcAge4(year[year.length - 1]);
+console.log(age90,age67,age18)
+
+const ages = [calcAge4(year[0]),calcAge4(year[1]),calcAge4(year[year.length - 1])]
+console.log(ages)
+
+//basic array operations
+const friends1 = ['Michael','Steven','Peter'];
+//add elements
+const newLength = friends1.push('Jay');
+console.log(friends1);
+console.log(newLength);
+
+friends1.unshift('John');
+console.log(friends1);
+//remove elements
+friends1.pop() //last
+const popped = friends1.pop() 
+console.log(popped)
+console.log(friends1)
+
+const shifted = friends1.shift(); //first
+console.log(shifted);
+console.log(friends1);
+
+console.log(friends1.includes('Steven'));
+console.log(friends1.includes('Bob'));
+
+if (friends1.includes('Steven')) {
+    console.log('You have a friend called Steven');
+}
+
+
+
+
+
