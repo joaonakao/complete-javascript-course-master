@@ -257,7 +257,7 @@ for (let exercise = 1; exercise < 4; exercise++){
     }
 }
 
-//while loop (bom para quando nao se sabe quantas vezes o loop ira acontecer, ou seja, nao precisa e um contador)
+//while loop
 
 let rep = 1
 while (rep <= 10){
@@ -265,10 +265,9 @@ while (rep <= 10){
     rep++;
 }
 
-let dice = Math.trunc(Math.random() * 6) + 1;
+let dice = Math.trunc(Math.random() * 6);
 
 while (dice !== 6){
-    console.log(`you rolled a ${dice}`);
-    dice = Math.trunc(Math.random() * 6) + 1;
-    if (dice === 6) console.log(`loop is about to end...`);
+    console.log(dice);
+    dice = Math.trunc(Math.random() * 6);
 }

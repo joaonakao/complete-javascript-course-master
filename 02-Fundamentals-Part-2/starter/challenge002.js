@@ -6,7 +6,6 @@ const calcTip = function (bill){
     } else {
         return bill * 0.20
     }   
-
 }
 
 const bills = [125,555,44]
