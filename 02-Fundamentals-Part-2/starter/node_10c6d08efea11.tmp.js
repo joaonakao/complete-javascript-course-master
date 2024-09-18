@@ -202,58 +202,6 @@ console.log (jonasObject.calcAge());
 console.log(`${jonasObject.firstName} is a ${jonasObject.calcAge()}-year old ${jonasObject.job}, and he has ${jonasObject.canDrive()} driver's license`);
 
 //loop
-const types = []
-
-for (let i = 0; i < jonas.length; i++) {
-    console.log(jonas[i], typeof jonas[i]);
-
-    types[i] = typeof jonas[i];
-
-    types.push(typeof jonas[i]);
+for (let i = 0; ; i++) {
+    console.log(jonas[i]);
 }
-
-console.log(types);
-
-const yearsLoop = [1991,2007,1969,2020];
-const agesLoop = [];
-
-for (let i = 0; i < yearsLoop.length; i++){
-   agesLoop.push (2037 - yearsLoop[i]);
-}
-console.log(agesLoop);
-
-//continue and break
-console.log('--- ONLY STRINGS ---');
-for (let i = 0; i < jonas.length; i++) {
-    if (typeof jonas[i] !== 'string')continue;
-
-    console.log(jonas[i], typeof jonas[i]);
-}
-
-console.log('--- BREAK WITH NUMBER ---');
-for (let i = 0; i < jonas.length; i++) {
-    if (typeof jonas[i] === 'number')break;
-
-    console.log(jonas[i], typeof jonas[i]);
-}
-
-//looping backwards and loops in loops
-
-for (let i = jonas.length - 1; i >= 0; i--) {
-    console.log(i, jonas[i]);
-}
-
-for (let exercise = 1; exercise < 4; exercise++){
-    console.log(`----- starting exercise ${exercise}`);
-
-    for (let rep = 1; rep < 6; rep++){
-        if(exercise === 1){
-            console.log(`exercise ${exercise}:lifting weight repetitions ${rep}`)
-        } else if (exercise === 2){
-            console.log(`exercise ${exercise}:abs repetitions ${rep}`)
-        } else {
-            console.log(`exercise ${exercise}:running repetitions ${rep}`)
-        }
-    }
-}
-

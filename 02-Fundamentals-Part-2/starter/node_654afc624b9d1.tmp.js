@@ -247,9 +247,9 @@ for (let exercise = 1; exercise < 4; exercise++){
     console.log(`----- starting exercise ${exercise}`);
 
     for (let rep = 1; rep < 6; rep++){
-        if(exercise === 1){
+        if(exercise = 1){
             console.log(`exercise ${exercise}:lifting weight repetitions ${rep}`)
-        } else if (exercise === 2){
+        } else if (exercise = 2){
             console.log(`exercise ${exercise}:abs repetitions ${rep}`)
         } else {
             console.log(`exercise ${exercise}:running repetitions ${rep}`)
