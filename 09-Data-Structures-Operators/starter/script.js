@@ -20,6 +20,15 @@ const restaurant = {
     console.log(`order received: ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`);
   },
 
+  orderPasta: function(ing1,ing2,ing3){
+    console.log(`Here is your delicious pasta with ${ing1}, ${ing2} and ${ing3}`);
+  },
+
+  orderPizza: function (mainIngredient, ...otherIngredients) {
+    console.log(mainIngredient);
+    console.log(otherIngredients);
+  },
+
   openingHours: {
     thu: {
       open: 12,
@@ -36,6 +45,18 @@ const restaurant = {
   },
 };
 
+restaurant.orderPizza('mush', 'onion', 'olive')
+
+//SPREAD, bcs on the right side of =
+const arr2 = [1,2,...[3,4]];
+
+//REST bcs on the left side of =
+const [f, g, ...others] = [1,2,3,4,5];
+console.log(f, g, others);
+
+const [pizza,,Risotto, ...otherFood] = [...restaurant.mainMenu, ...restaurant.starterMenu];
+console.log(pizza, Risotto, otherFood);
+
 restaurant.orderDelivery({
   time:'22:30',
   address: 'duque de caxias 1338',
@@ -43,9 +64,47 @@ restaurant.orderDelivery({
   starterIndex: 2,
 })
 
+//const ingredients = [prompt(`Let's make pasta! Ingredient 1?`), prompt(`Let's make pasta! Ingredient 2?`), prompt(`Let's make pasta! Ingredient 3?`)];
+
+//console.log(ingredients);
+
+//restaurant.orderPasta(...ingredients);
+
+// objects
+const newRestaurant = {foundedIn: 1998, ...restaurant, founder: 'Giuseppe'};
+console.log(newRestaurant);
+
+const restaurantCopy = {...restaurant};
+restaurantCopy.name = 'Ristorante Roma';
+console.log(restaurant.name);
+console.log(restaurantCopy.name);
+
+///
+const arr1 = [7,8,9];
+const badNewArr = [1,2,arr1[0],arr1[1], arr1[2]];
+console.log(badNewArr);
+// the spread operator '...', only use when you have to write many values separated by virgula
+const newArr = [1,2, ...arr1];
+console.log(newArr);
+console.log(...newArr);
+
+const newMenu = [...restaurant.mainMenu, 'Gnocci'];
+console.log(...newMenu);
+
+// copy array
+const mainMenuCopy = [...restaurant.mainMenu];
+//join 2 arrays
+const menu1 = [...restaurant.mainMenu,...restaurant.starterMenu];
+console.log(menu1);
+
+//iterables: arrays, strings, maps, sets. !objects
+const str = 'Jonas';
+const letters = [...str];
+console.log(letters);
+
 
 //object destructuring
-const {name, openingHours, categories} = restaurant
+const {name, openingHours, categories} = restaurant;
 
 console.log(name, openingHours, categories);
 
@@ -67,6 +126,7 @@ console.log(s, t);
 //nested objects
 const {fri: {open: o, close: d}} = openingHours
 console.log(o, d);
+
 
 
 
@@ -110,3 +170,9 @@ console.log(i, j, k);
 //default values
 const [p = 1,q = 1,r = 1] = [8,9];
 console.log(p,q,r);
+
+//logic operators. can use any data type, return any data type, short-circuiting
+console.log(3 || 'Jonas');
+console.log(''||'Jonas');
+console.log(true || 0);
+console.log(undefined || null);
