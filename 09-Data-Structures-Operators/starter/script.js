@@ -155,6 +155,7 @@ console.log(s, t);
 const {fri: {open: o, close: d}} = openingHours
 console.log(o, d);
 
+//optional chaining (?.)
 
 
 
